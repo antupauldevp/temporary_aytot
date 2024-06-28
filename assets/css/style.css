@@ -1,0 +1,385 @@
+:root{
+    ---common-font:"Josefin Sans", sans-serif;
+    ----second-font: "Roboto", sans-serif;
+    ---icons-color: #11161E;
+}
+body{
+    font-family: var(---common-font);
+}
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6,ol,ul,p,span{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    
+}
+ul{
+    list-style-type:none ;
+}
+
+.praimaryButton{
+    font-family: var(---common-font);
+    display: inline-block ;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 167%;
+    text-align: center;
+    color: white;
+    background-color: #FF6F61;
+    padding: 14px 23px;
+}
+/* Nav Start */
+nav ul li a{
+    padding: 0 !important;
+    color: #11161E;
+}
+nav .navbar-nav{
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+nav ul li{
+    padding: 0 22px;
+    font-weight: 600;  
+}
+nav .icons{
+    display: flex;
+    margin-bottom: 0 !important;
+}
+
+.dropend .dropdown-toggle:hover{
+    color: #FF6F61;
+}
+.dropdown-item:hover{
+    background-color: #FF6F61;
+    color: #11161E;
+}
+.navbar-nav .nav-link:hover{
+    color: #FF6F61;
+}
+.dropdown .dropdown-menu{
+    display: none  ;
+}
+.dropdown:hover > .dropdown-menu, .dropend:hover > .dropdown-menu{
+    display: block; 
+   font-size: 18px;
+  
+}
+@media screen and (min-width:769px){
+    .dropend:hover > .dropdown-menu{
+        position: absolute;
+        top: 0;
+        left: 100%;
+    }
+}
+
+nav .resShop{
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  align-items: end;
+  justify-content: end;
+}
+.resShop .count-res{
+    background-color: #FF6F61;
+    color: white;
+    display: flex;
+    width: 15px;
+  height: 15px;
+  line-height: 15px;
+  text-align: center;
+  font-size: 12px;
+  justify-content: center;
+    border-radius: 50%;
+    top: 50%;
+    transform: translate(8px, -26px);
+
+}
+nav .card-count{
+    position: relative;
+}
+
+nav .card-count .count{
+    width: 15px;
+    background-color: #FF6F61;
+    display: inline-block;
+    height: 15px;
+    position: absolute;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 17px;
+    font-size: 15px;
+    color: white;
+    right: 13px;
+}
+.search-box{
+    height: 100VH;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    z-index: 11;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: relative; */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.6s;
+}
+.search-box.active-search{
+    opacity: 1;
+    visibility: visible;
+}
+
+.search-box input{
+    border: none;
+    outline: none;
+    border-radius: 50px 0px 0px 50px;
+    padding:10px 30px ;
+    width: 0px;
+    position: relative;
+    background-color: transparent;
+    border: 2px solid #FF6F61 ;
+    color: white;
+    transition: 0.4s;
+}
+.search-box input.active-width{
+    width: 500px;
+}
+.search-box button{
+    border: 2px solid #FF6F61;
+    /* border: none; */
+    outline: none;
+    position: absolute;
+    padding:10px 30px ;
+   background-color: #FF6F61;
+   border-radius: 0 50px 50px 0;
+   color: white;
+   
+}
+.search-box input::placeholder{
+    color: rgba(255, 255, 255, 0.711);
+}
+.cross-btn{
+    background-color: transparent;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 30px;
+    right: 70px;
+    border-radius: 50%;
+    line-height: 60px;
+    color: white;
+    font-size: 23px;
+    text-align: center;
+    padding: 2px;
+    border: 2px solid #FF6F61;
+    transition: 0.4s;
+    cursor: pointer;
+
+    
+}
+.cross-btn:hover{
+    background-color: #FF6F61;
+    transform: rotate(360deg);
+}
+/* Nav end */
+
+
+            /* banner start */
+            #banner{
+                position: relative;
+            }
+            #banner .slide .bannerInfo *{
+                opacity: 0;
+                transform: translateY(150px);
+                transition: 0.5552s ease;
+
+            }
+            #banner .slick-active .slide .bannerInfo *{
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+#banner .bannerSlider .slide{
+    height: 800px;
+   background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+#banner .slide .bannerInfo h4{
+    font-family: var(---common-font);
+    font-size: 18px;
+    line-height: 156%;
+    font-weight: 600;
+    color: #1d1d1d;
+    
+}                
+#banner .slide .bannerInfo h2{
+    transition-delay: 0.2s;
+    font-family: var(---common-font);
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 116%;
+    color: #1d1d1d;
+    margin: 14px 0 16px ;
+}                
+#banner .slide .bannerInfo p{
+    transition-delay: 0.2s;
+    font-family: var(----second-font);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    color: #1d1d1d;
+}                
+#banner .slide  .bannerInfo a{
+margin-top: 29px;
+padding: 13px 37px !important;
+
+}    
+#banner .bannerInfo a .rightArrow{
+    font-size: 17px;
+    display: inline-block;
+    top: 50%;
+
+}      
+#banner .bannerDots{
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    
+
+}
+#banner .bannerDots button{
+    width: 13px;
+    height: 6px;
+    color: transparent;
+    border-radius: 70px;
+    border: none;
+    margin-right: 6px;
+    background-color: white;
+    transition: 0.4s;
+}
+#banner .bannerDots .slick-active button{
+    width: 29px;
+    background-color: #FF6F61;
+
+}
+#banner .smallSlider .slide img{
+    width: 350px;
+}
+             /* banner Ends*/
+
+
+             /* prodect card start */
+    #prodect{
+        margin-top: 112px;
+        position: relative !important;
+    }
+    #prodect .innerCard{
+        position: relative;
+    }
+
+#prodect .overlay{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    inset: 20px 50px;
+    background-color: #11161e75;
+    z-index: 1;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column  ;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transform-origin: left top;
+    transform: scale(0);
+    transition: 0.5s;
+    
+}
+#prodect .innerCard:hover .overlay{
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+#prodect .card2:hover .overlay{
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+#prodect .overlay a{
+    
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 175%;
+    text-align: center;
+    color: white;
+}
+
+#prodect .card2 {
+    position: relative;
+}
+
+
+
+             /* prodect card end */
+
+
+             /* cosmetics start */
+             #cosmetics{
+                margin-top: 100px;
+             }
+             
+             #cosmetics .cosmeticsParent .container{
+                display: flex;
+                flex-direction: column;
+                top: 100px;
+                height: 100%;
+               transform: translate(-340px, 103px);
+              
+              
+             }
+
+ #cosmetics .cosmeticsParent .container h2{
+    font-family: var(---common-font);
+font-weight: 700;
+font-size: 36px;
+line-height: 128%;
+color: white;
+ }
+ #cosmetics .cosmeticsParent .container p{
+margin-top: 10px;
+ font-family: var(----second-font) ;
+font-weight: 400;
+font-size: 16px;
+line-height: 175%;
+color: white;
+    
+             }
+             #cosmetics .cosmeticsParent .container .praimaryButton{
+                margin-top:30px ;
+                border: 1px solid white !important;
+                width: 180px;
+                height: 56px;
+                background-color: transparent;
+                transition: 0.4s;
+             }
+             #cosmetics .cosmeticsParent .container .praimaryButton:hover{
+                background-color: #FF6F61;
+                color: white;
+                border: none !important;
+                border-radius: 6px;
+             }
+             /* cosmetics End */
